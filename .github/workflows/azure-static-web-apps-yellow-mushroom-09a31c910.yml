@@ -14,7 +14,16 @@ jobs:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
-    steps:
+    steps: 
+      - name: Install Node 18
+        uses: ctions/setup-node@v2
+        with:
+          # The version to Node to instal
+          node-version: '18.16.0'
+      - name: Buld and server Gastby site
+        run: |
+          # install dependencies
+          npm install
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
