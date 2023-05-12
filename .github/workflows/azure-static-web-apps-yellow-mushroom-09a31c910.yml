@@ -16,7 +16,7 @@ jobs:
     name: Build and Deploy Job
     steps: 
       - name: Install Node 18
-        uses: ctions/setup-node@v2
+        uses: actions/setup-node@v2
         with:
           # The version to Node to instal
           node-version: '18.16.0'
