@@ -15,15 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps: 
-      - name: Install Node 18
-        uses: actions/setup-node@v2
-        with:
-          # The version to Node to instal
-          node-version: '18.16.0'
-      - name: Buld and server Gastby site
-        run: |
-          # install dependencies
-          npm install
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
